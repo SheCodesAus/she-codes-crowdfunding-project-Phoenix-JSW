@@ -2,12 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Nav() {
-    return (
+  return (
     <nav>
-        <Link to="/">Home</Link>
-        <Link to="/project">Project</Link>
-        </nav>
-    );
+      <Link to="/">Home</Link>
+    </nav>
+  );
 }
-    
+
 export default Nav;
