@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
+
+// Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
 function HomePage() {
+  // States
   const [projectList, setProjectList] = useState([]);
+
+  // Action & Helpers
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}projects`)
       .then((results) => {
@@ -15,12 +20,16 @@ function HomePage() {
 
   return (
     <div id="project-list">
-      {projectList.map((projectData, key) => {
-        return <ProjectCard key={key} projectData={projectData} />;
+      {projectList.map((projectData) => {
+        return (
+          <ProjectCard
+            key={`project-${projectData.id}`}
+            projectData={projectData}
+          />
+        );
       })}
     </div>
   );
 }
+
 export default HomePage;
-
-
