@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Components
-import ProjectCard from "../components/ProjectCard/ProjectCard";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 function HomePage() {
   // States

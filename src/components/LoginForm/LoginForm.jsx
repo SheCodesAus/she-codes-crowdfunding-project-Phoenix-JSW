@@ -20,30 +20,6 @@ function LoginForm() {
     }));
   };
 
-  // const postData = async () => {
-  //   const response = await fetch(
-  //     `${process.env.REACT_APP_API_URL}api-token-auth/`,
-  //     {
-  //       method: "post",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(credentials),
-  //     }
-  //   );
-  //   return response.json();
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (credentials.username && credentials.password) {
-  //     postData().then((response) => {
-  //       console.log("response", response);
-  //       window.localStorage.setItem("token", response.token);
-  //     });
-  //   }
-  // };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (credentials.username && credentials.password) {
@@ -61,7 +37,6 @@ function LoginForm() {
         const data = await response.json();
         console.log("data", data);
         window.localStorage.setItem("token", data.token);
-        window.localStorage.setItem("username", credentials.username);
         navigate("/");
       } catch (err) {
         console.log(err);

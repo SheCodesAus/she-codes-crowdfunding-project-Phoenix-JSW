@@ -1,5 +1,6 @@
 import React from "react"
-import Spinner from "../../assests/images/loadingspinner.gif"
+import Spinner from "../../Media/images/RunningDog.gif"
+import"
 import "./FullPageLoader.css"
 
 function FullPageLoader() {
